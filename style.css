@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    width: 50vw;
+    height: 55vh;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+button{
+    width: 41px;
+    height: 41px;
+    position: absolute;
+    border-radius: 10px;
+}
+.prev{
+    left: -25px;
+}
+.next{
+    right: -25px;
+}
+.fa-angle-left:before{
+    font-size: 30px;
+}
+.fa-angle-right:before{
+    font-size: 30px;
+}

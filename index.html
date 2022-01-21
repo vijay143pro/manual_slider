@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>Manual slide show</h1><br>
+    <div class="container">
+        <img src="http://www.sololearn.com/uploads/slider/3.jpg" width="95%" height="90%" class="disp"/>
+        <button class="prev"><i class="fa fa-angle-left"></i></button>
+        <button class="next"><i class="fa fa-angle-right"></i></button>
+    </div>
+</body>
+<script>
+    // declare variable to get get elements by querySelector
+    var prev=document.querySelector(".prev");
+    var next=document.querySelector(".next");
+    var disp=document.querySelector(".disp");
+    var pics=["https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg",
+              "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg",
+              "https://cdn.pixabay.com/photo/2015/12/09/01/02/mandalas-1084082_960_720.jpg",
+              "https://cdn.pixabay.com/photo/2016/10/20/18/35/earth-1756274_960_720.jpg",
+              "https://cdn.pixabay.com/photo/2013/08/20/15/47/poppies-174276_960_720.jpg",
+              ]
+    var num=0;
+
+    // function for images swipe to left side
+    next.addEventListener('click',()=>{
+        disp.src=pics[num];
+        num++;
+        if(num>=pics.length){
+            num=0;
+        } 
+     });
+
+     // function for images to swipe right side
+     prev.addEventListener('click',()=>{
+        disp.src=pics[num];
+        if(num==0){
+            num=pics.length;
+        }
+        num--;
+     });
+    
+</script>
+</html>
